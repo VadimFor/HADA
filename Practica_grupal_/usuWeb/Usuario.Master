@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Usuario.Master.cs" Inherits="usuWeb.Usuario" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+
+    <!--Título de la página web -->
+    <title>Sanvi Houses</title>
+
+    <!--Link del archivo css -->
+    <link rel= "Stylesheet" type="text/css" href="css/PRINCIPAL.css" /> 
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+  <!-- Bootstrap CSS File -->
+  <link href="JavaScript/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="JavaScript/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="JavaScript/animate/animate.min.css" rel="stylesheet">
+  <link href="JavaScript/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="JavaScript/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <script defer  src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script defer  src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script defer  src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+<script defer  src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+<script defer  src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+<script defer  src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+<script defer  src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js"></script>
+<script defer  src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script defer  src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script defer  src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+
+<style>
+    ul.static{
+        flex-direction: row !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-direction: column !important;
+        padding-left: 0 !important;
+        margin-bottom: 0 !important;
+        list-style: none !important;
+    }
+    li.static{
+        position: relative !important; 
+        padding-right: 10px !important;
+        padding-bottom: 8px !important;
+        margin-left: 15px !important;
+    }
+</style>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+<div class="container">
+    <a class="navbar-brand text-brand" href="/">Sanvi<span class="color-b">Houses</span></a>
+    <asp:Menu ID="NavMenu" runat="server" CssClass="container navbar-collapse collapse justify-content-end" Orientation="Horizontal" OnMenuItemClick="NavMenu_MenuItemClick">
+    <Items>
+        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Inicio" Value="1" ></asp:MenuItem>
+        <asp:MenuItem NavigateUrl="~/html_propiedad.aspx" Text="Propiedades" Value="2" ></asp:MenuItem>
+        <asp:MenuItem NavigateUrl="~/html_publicar.aspx" Text="Publicar" Value="3" ></asp:MenuItem>
+        <asp:MenuItem NavigateUrl="~/html_perfilUsuario.aspx" Text="Perfil" Value="4" ></asp:MenuItem>
+        <asp:MenuItem NavigateUrl="~/html_favoritos.aspx" Text="Favoritos" Value="5" ></asp:MenuItem>
+        <asp:MenuItem NavigateUrl="~/html_mensajes.aspx" Text="Mensajes" Value="6"></asp:MenuItem>
+        <asp:MenuItem Text="" Value="7" ImageUrl="~/imagenes/out.png"></asp:MenuItem>
+    </Items>
+    <StaticMenuItemStyle CssClass="nav-link" />
+</asp:Menu>
+</div>
+
+
+</nav>
+
+    <!-- CONTENIDO -->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+              <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="nav-footer">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="/Default.aspx">Inicio</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/html_propiedad.aspx">Propiedades</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/html_publicar.aspx">Publicar</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/html_favoritos.aspx">Favoritos</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/html_perfilUsuario.aspx">Perfil</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="socials-a">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                    <asp:LinkButton CssClass="fa fa-pinterest" href="https://pin.it/6wx12ce" runat="server"></asp:LinkButton>
+                </li>
+                <li class="list-inline-item">
+                    <asp:LinkButton CssClass="fa fa-twitter" href="https://twitter.com/SanviHouses" runat="server"></asp:LinkButton>
+                </li>
+                <li class="list-inline-item">
+                    <asp:LinkButton CssClass="fa fa-instagram" href="https://www.instagram.com/sanvihouses/" runat="server"></asp:LinkButton>
+
+              </li>
+              
+            </ul>
+          </div>
+          <div class="copyright-footer">
+            <p class="copyright color-text-a">
+              &copy; Copyright
+              <span class="color-a">Sanvi Houses</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+
+</form>
+
+      <!-- JavaScript Libraries -->
+  <script src="JavaScript/jquery/jquery.min.js"></script>
+  <script src="JavaScript/jquery/jquery-migrate.min.js"></script>
+  <script src="JavaScript/popper/popper.min.js"></script>
+  <script src="JavaScript/bootstrap/js/bootstrap.min.js"></script>
+  <script src="JavaScript/easing/easing.min.js"></script>
+  <script src="JavaScript/owlcarousel/owl.carousel.min.js"></script>
+  <script src="JavaScript/scrollreveal/scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="JavaScript/main.js"></script>
+
+</body>
+</html>

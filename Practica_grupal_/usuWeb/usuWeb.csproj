@@ -1,0 +1,321 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A0DDBF4-458F-48CC-AC6F-AE6B9FC1E248}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>usuWeb</RootNamespace>
+    <AssemblyName>usuWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44323</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\InmoData.mdf" />
+    <Content Include="App_Data\InmoData_log.ldf">
+      <DependentUpon>InmoData.mdf</DependentUpon>
+    </Content>
+    <Content Include="css\iniciarSesion.css" />
+    <Content Include="css\perfilUsuario.css" />
+    <Content Include="css\PRINCIPAL.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="html_404.aspx" />
+    <Content Include="html_anuncio.aspx" />
+    <Content Include="html_contacto.aspx" />
+    <Content Include="html_contacto_web.aspx" />
+    <Content Include="html_favoritos.aspx" />
+    <Content Include="html_IniciarSesion.aspx" />
+    <Content Include="html_mensajes.aspx" />
+    <Content Include="html_perfilUsuario.aspx" />
+    <Content Include="html_propiedad.aspx" />
+    <Content Include="html_publicar.aspx" />
+    <Content Include="html_registrarse.aspx" />
+    <Content Include="html_admin.aspx" />
+    <Content Include="html_verification.aspx" />
+    <Content Include="imagenes\agente-inmobiliario.jpg" />
+    <Content Include="imagenes\Casas-Modernas-7.jpg" />
+    <Content Include="imagenes\property-1.jpg" />
+    <Content Include="imagenes\property-2.jpg" />
+    <Content Include="imagenes\property-3.jpg" />
+    <Content Include="imagenes\property-4.jpg" />
+    <Content Include="imagenes\property-5.jpg" />
+    <Content Include="imagenes\sanvihousesicono.png" />
+    <Content Include="imagenes\slide-1.jpg" />
+    <Content Include="imagenes\slide-2.jpg" />
+    <Content Include="imagenes\slide-3.jpg" />
+    <Content Include="JavaScript\animate\animate.css" />
+    <Content Include="JavaScript\animate\animate.min.css" />
+    <Content Include="JavaScript\bootstrap\css\bootstrap.css" />
+    <Content Include="JavaScript\bootstrap\css\bootstrap.min.css" />
+    <Content Include="JavaScript\bootstrap\js\bootstrap.js" />
+    <Content Include="JavaScript\bootstrap\js\bootstrap.min.js" />
+    <Content Include="JavaScript\easing\easing.js" />
+    <Content Include="JavaScript\easing\easing.min.js" />
+    <Content Include="JavaScript\font-awesome\css\font-awesome.css" />
+    <Content Include="JavaScript\font-awesome\css\font-awesome.min.css" />
+    <Content Include="JavaScript\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="JavaScript\ionicons\css\ionicons.css" />
+    <Content Include="JavaScript\ionicons\css\ionicons.min.css" />
+    <Content Include="JavaScript\ionicons\fonts\ionicons.svg" />
+    <Content Include="JavaScript\jquery\jquery-migrate.min.js" />
+    <Content Include="JavaScript\jquery\jquery.min.js" />
+    <Content Include="JavaScript\main.js" />
+    <Content Include="JavaScript\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="JavaScript\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="JavaScript\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="JavaScript\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="JavaScript\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="JavaScript\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="JavaScript\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="JavaScript\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="JavaScript\owlcarousel\owl.carousel.js" />
+    <Content Include="JavaScript\owlcarousel\owl.carousel.min.js" />
+    <Content Include="JavaScript\popper\popper.min.js" />
+    <Content Include="JavaScript\scrollreveal\scrollreveal.js" />
+    <Content Include="JavaScript\scrollreveal\scrollreveal.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="html_404.aspx.cs">
+      <DependentUpon>html_404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_404.aspx.designer.cs">
+      <DependentUpon>html_404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_anuncio.aspx.cs">
+      <DependentUpon>html_anuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_anuncio.aspx.designer.cs">
+      <DependentUpon>html_anuncio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_contacto.aspx.cs">
+      <DependentUpon>html_contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_contacto.aspx.designer.cs">
+      <DependentUpon>html_contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_contacto_web.aspx.cs">
+      <DependentUpon>html_contacto_web.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_contacto_web.aspx.designer.cs">
+      <DependentUpon>html_contacto_web.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_favoritos.aspx.cs">
+      <DependentUpon>html_favoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_favoritos.aspx.designer.cs">
+      <DependentUpon>html_favoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_IniciarSesion.aspx.cs">
+      <DependentUpon>html_IniciarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_IniciarSesion.aspx.designer.cs">
+      <DependentUpon>html_IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_mensajes.aspx.cs">
+      <DependentUpon>html_mensajes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_mensajes.aspx.designer.cs">
+      <DependentUpon>html_mensajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_perfilUsuario.aspx.cs">
+      <DependentUpon>html_perfilUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_perfilUsuario.aspx.designer.cs">
+      <DependentUpon>html_perfilUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_propiedad.aspx.cs">
+      <DependentUpon>html_propiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_propiedad.aspx.designer.cs">
+      <DependentUpon>html_propiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_publicar.aspx.cs">
+      <DependentUpon>html_publicar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_publicar.aspx.designer.cs">
+      <DependentUpon>html_publicar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_registrarse.aspx.cs">
+      <DependentUpon>html_registrarse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_registrarse.aspx.designer.cs">
+      <DependentUpon>html_registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_admin.aspx.cs">
+      <DependentUpon>html_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_admin.aspx.designer.cs">
+      <DependentUpon>html_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_verification.aspx.cs">
+      <DependentUpon>html_verification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_verification.aspx.designer.cs">
+      <DependentUpon>html_verification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.Master.cs">
+      <DependentUpon>Usuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario.Master.designer.cs">
+      <DependentUpon>Usuario.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JavaScript\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="JavaScript\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="JavaScript\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="JavaScript\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="JavaScript\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="JavaScript\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="JavaScript\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="JavaScript\ionicons\fonts\ionicons.eot" />
+    <Content Include="JavaScript\ionicons\fonts\ionicons.ttf" />
+    <Content Include="JavaScript\ionicons\fonts\ionicons.woff" />
+    <Content Include="JavaScript\ionicons\fonts\ionicons.woff2" />
+    <Content Include="JavaScript\owlcarousel\LICENSE" />
+    <Content Include="JavaScript\popper\popper.min.js.map.json" />
+    <Content Include="imagenes\joven-confiado_1098-20868.webp" />
+    <Content Include="Site1.Master" />
+    <Content Include="Usuario.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\library\library.csproj">
+      <Project>{5dab133c-773c-4517-953e-bcdc85615183}</Project>
+      <Name>library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55873</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44323/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
